@@ -10,3 +10,4 @@ val Teal200 = Color(0xFF03DAC5)
 
 val unicornPurple = Color(R.color.purple)
 val numbersPink = Color(R.color.pink)
+val blue = Color(R.color.bgBlue)
