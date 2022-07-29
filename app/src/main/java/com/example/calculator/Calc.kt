@@ -16,6 +16,7 @@ import com.example.calculator.ui.theme.numbersPink
 import com.example.calculator.ui.theme.unicornPurple
 import androidx.compose.material.Text
 import androidx.compose.ui.ExperimentalComposeUiApi
+import androidx.compose.ui.text.AnnotatedString
 
 @OptIn(ExperimentalComposeUiApi::class)
 @Composable
@@ -25,15 +26,15 @@ fun Calc(
     modifier: Modifier,
     onAction : (CalcActions) -> Unit
 ){
-    Box(modifier){
+    Box(modifier = modifier){
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .align(Alignment.Center),
+                .align(Alignment.BottomCenter),
             verticalArrangement = Arrangement.spacedBy(buttonSpacing)
         ){
             Text(
-                text = state.number1+ (state.operation ?: "") + state.number2,
+                AnnotatedString(text = state.number1 + (state.operation ?: "") + state.number2),
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(vertical = 32.dp),
